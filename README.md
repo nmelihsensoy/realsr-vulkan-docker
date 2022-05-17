@@ -6,7 +6,7 @@ Requires [nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-container-t
 
 [`Vulkaninfo`](https://vulkan.lunarg.com/doc/view/1.2.148.1/windows/vulkaninfo.html) tool also shipped with the image and can be used as following: 
 
-```console
+```
 > sudo docker run --rm --gpus all -it --entrypoint="vulkaninfo" realsr-vulkan-docker -h
 
 vulkaninfo - Summarize Vulkan information in relation to the current environment.
@@ -25,8 +25,8 @@ USAGE:
 
 ## Usage
 
-```console
->sudo docker run --rm --gpus all -it realsr-vulkan-docker
+```
+> sudo docker run --rm --gpus all -it realsr-vulkan-docker
 Usage: realsr-ncnn-vulkan -i infile -o outfile [options]...
 
   -h                   show this help
@@ -46,7 +46,7 @@ Usage: realsr-ncnn-vulkan -i infile -o outfile [options]...
 Upscaling `./images/input.png` file to `./images/output.jpg`
 
 ```
-sudo docker run --rm -v `pwd`/images:/tmp --gpus all -it 
+> sudo docker run --rm -v `pwd`/images:/tmp --gpus all -it 
 realsr-vulkan-docker -i /tmp/input.png -o /tmp/output.jpg -s 4 -x -m models-DF2K
 ```
 
