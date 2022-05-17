@@ -7,7 +7,7 @@ Requires [nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-container-t
 [`Vulkaninfo`](https://vulkan.lunarg.com/doc/view/1.2.148.1/windows/vulkaninfo.html) tool also shipped with the image and can be used as following: 
 
 ```
-> sudo docker run --rm --gpus all -it --entrypoint="vulkaninfo" realsr-vulkan-docker -h
+> sudo docker run --rm --gpus all -it --entrypoint="vulkaninfo" ghcr.io/nmelihsensoy/realsr-vulkan -h
 
 vulkaninfo - Summarize Vulkan information in relation to the current environment.
 
@@ -26,7 +26,7 @@ USAGE:
 ## Usage
 
 ```
-> sudo docker run --rm --gpus all -it realsr-vulkan-docker
+> sudo docker run --rm --gpus all -it ghcr.io/nmelihsensoy/realsr-vulkan
 Usage: realsr-ncnn-vulkan -i infile -o outfile [options]...
 
   -h                   show this help
@@ -46,8 +46,7 @@ Usage: realsr-ncnn-vulkan -i infile -o outfile [options]...
 Upscaling `./images/input.png` file to `./images/output.jpg`
 
 ```
-> sudo docker run --rm -v `pwd`/images:/tmp --gpus all -it 
-realsr-vulkan-docker -i /tmp/input.png -o /tmp/output.jpg -s 4 -x -m models-DF2K
+> sudo docker run --rm -v `pwd`/images:/tmp --gpus all -it ghcr.io/nmelihsensoy/realsr-vulkan -i /tmp/input.png -o /tmp/output.jpg -s 4 -x -m models-DF2K
 ```
 
 For other images, just put images into `images` folder and change the `input.png`, `output.jpg` parts.
